@@ -13,7 +13,8 @@ work with Python greater than 3.4, too.
 - edit /usr/local/lib/python3.7/dist-packages/Adafruit_DHT/platform_detect.py
 add "BCM2711" like below
 
-![image](https://user-images.githubusercontent.com/75207648/136056243-5df6503c-56b4-496d-aad1-f5be30031c2b.png)
+![image](https://user-images.githubusercontent.com/75207648/136056520-a0487fe2-1ceb-410b-96b3-eb1e9260c228.png)
+
 
     elif match.group(1) == 'BCM2837':
         # Pi 3b+
