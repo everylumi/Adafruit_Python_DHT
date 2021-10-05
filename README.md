@@ -8,9 +8,10 @@ https://www.adafruit.com/products/385
 Currently the library is tested with Python 2.6, 2.7, 3.3 and 3.4.... 3.9 It should
 work with Python greater than 3.4, too.
 
-## For Raspberry Pi 4B
+For Raspberry Pi 4B
 ----------------------
-- edit /usr/local/lib/python3.7/dist-packages/Adafruit_DHT/platform_detect.py
+- if when installing using pip
+edit /usr/local/lib/python3.7/dist-packages/Adafruit_DHT/platform_detect.py
 add "BCM2711" like below
 
 ![image](https://user-images.githubusercontent.com/75207648/136056520-a0487fe2-1ceb-410b-96b3-eb1e9260c228.png)
@@ -19,8 +20,26 @@ add "BCM2711" like below
         # Pi 4b
         return 3
 
-- or Compile and install from this repository 
-  git clone https://github.com/everylumi/Adafruit_Python_DHT.git
+- Recommend to Compile and install from this repository 
+
+```sh
+git clone https://github.com/everylumi/Adafruit_Python_DHT.git
+```
+
+Python 2:
+
+```sh
+cd Adafruit_Python_DHT
+sudo python setup.py install
+```
+
+Python 3:
+
+```sh
+cd Adafruit_Python_DHT
+sudo python3 setup.py install
+```
+
 
 
 Installing
@@ -64,34 +83,6 @@ Python 3:
 
 ```sh
 sudo pip3 install Adafruit_DHT
-```
-
-### Compile and install from the repository
-
-First download the library source code from the [GitHub releases
-page](https://github.com/adafruit/Adafruit_Python_DHT/releases), unzipping the
-archive, and execute:
-
-Python 2:
-
-```sh
-cd Adafruit_Python_DHT
-sudo python setup.py install
-```
-
-Python 3:
-
-```sh
-cd Adafruit_Python_DHT
-sudo python3 setup.py install
-```
-
-## Recommand git clone the repository
-You may also git clone the repository if you want to test an unreleased
-version: 
-
-```sh
-git clone https://github.com/everylumi/Adafruit_Python_DHT.git
 ```
 
 Usage
