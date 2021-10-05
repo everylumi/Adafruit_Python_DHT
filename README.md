@@ -9,8 +9,11 @@ Currently the library is tested with Python 2.6, 2.7, 3.3 and 3.4.... 3.9 It sho
 work with Python greater than 3.4, too.
 
 ## For Raspberry Pi 4B
+----------------------
 - edit /usr/local/lib/python3.7/dist-packages/Adafruit_DHT/platform_detect.py
 add "BCM2711" like below
+
+![image](https://user-images.githubusercontent.com/75207648/136056243-5df6503c-56b4-496d-aad1-f5be30031c2b.png)
 
     elif match.group(1) == 'BCM2837':
         # Pi 3b+
