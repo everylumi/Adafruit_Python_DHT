@@ -13,7 +13,9 @@ work with Python greater than 3.4, too.
 For Raspberry Pi 4B
 ----------------------
 - if when installing using pip
+
 edit /usr/local/lib/python3.7/dist-packages/Adafruit_DHT/platform_detect.py
+
 add "BCM2711" like below
 
 ![image](https://github.com/everylumi/Adafruit_Python_DHT/blob/master/add_code_platform_detect.py.PNG)
