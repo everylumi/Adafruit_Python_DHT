@@ -15,10 +15,6 @@ add "BCM2711" like below
 
 ![image](https://user-images.githubusercontent.com/75207648/136056520-a0487fe2-1ceb-410b-96b3-eb1e9260c228.png)
 
-
-    elif match.group(1) == 'BCM2837':
-        # Pi 3b+
-        return 3
     elif match.group(1) == 'BCM2711':
         # Pi 4b
         return 3
