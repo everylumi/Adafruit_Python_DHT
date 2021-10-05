@@ -8,6 +8,8 @@ https://www.adafruit.com/products/385
 Currently the library is tested with Python 2.6, 2.7, 3.3 and 3.4.... 3.9 It should
 work with Python greater than 3.4, too.
 
+
+
 For Raspberry Pi 4B
 ----------------------
 - if when installing using pip
@@ -85,10 +87,14 @@ Python 3:
 sudo pip3 install Adafruit_DHT
 ```
 
+
+
 Usage
 -----
 
 See example of usage in the examples folder.
+
+
 
 Author
 ------
