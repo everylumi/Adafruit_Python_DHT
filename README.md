@@ -104,6 +104,6 @@ support Adafruit and open-source hardware by purchasing products from Adafruit!
 
 Written by Tony DiCola for Adafruit Industries.
 
-Modified by LUMI to work for Raspberry Pi 4
+Modified by LUMI to work at Raspberry Pi 4
 
 MIT license, all text above must be included in any redistribution
