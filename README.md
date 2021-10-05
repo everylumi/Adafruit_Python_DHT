@@ -8,6 +8,21 @@ https://www.adafruit.com/products/385
 Currently the library is tested with Python 2.6, 2.7, 3.3 and 3.4.... 3.9 It should
 work with Python greater than 3.4, too.
 
+## For Raspberry Pi 4B
+- edit /usr/local/lib/python3.7/dist-packages/Adafruit_DHT/platform_detect.py
+add "BCM2711" like below
+
+    elif match.group(1) == 'BCM2837':
+        # Pi 3b+
+        return 3
+    elif match.group(1) == 'BCM2711':
+        # Pi 4b
+        return 3
+
+- or Compile and install from this repository 
+  git clone https://github.com/everylumi/Adafruit_Python_DHT.git
+
+
 Installing
 ----------
 
@@ -71,8 +86,9 @@ cd Adafruit_Python_DHT
 sudo python3 setup.py install
 ```
 
+## Recommand git clone the repository
 You may also git clone the repository if you want to test an unreleased
-version:
+version: 
 
 ```sh
 git clone https://github.com/everylumi/Adafruit_Python_DHT.git
