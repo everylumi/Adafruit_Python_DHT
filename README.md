@@ -75,7 +75,7 @@ You may also git clone the repository if you want to test an unreleased
 version:
 
 ```sh
-git clone https://github.com/adafruit/Adafruit_Python_DHT.git
+git clone https://github.com/everylumi/Adafruit_Python_DHT.git
 ```
 
 Usage
