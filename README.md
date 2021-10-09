@@ -1,4 +1,5 @@
 
+# Adafruit_Python_DHT
 Python library to read the DHT series of humidity and temperature sensors on a
 Raspberry Pi or Beaglebone Black.
 
@@ -9,46 +10,54 @@ Currently the library is tested with Python 2.6, 2.7, 3.3 and 3.4.... 3.9 It sho
 work with Python greater than 3.4, too.
 
 
+## Installation
+```sh
+cd Downloads/  
+git clone https://github.com/everylumi/Adafruit_Python_DHT.git
+cd Adafruit_Python_DHT/
+sudo python3 setup.py install #Python3  
+sudo python setup.py install #Python2
+```
 
-For Raspberry Pi 4B
-----------------------
-- if when installing using pip
 
-edit /usr/local/lib/python3.7/dist-packages/Adafruit_DHT/platform_detect.py
+## what if install using pip at Raspberry Pi 4B
+- edit "platform_detect.py" for using  
+```
+/usr/local/lib/python3.7/dist-packages/Adafruit_DHT/platform_detect.py
+```
+- add "BCM2711" like below
 
-add "BCM2711" like below
-
-![image](https://github.com/everylumi/Adafruit_Python_DHT/blob/master/add_code_platform_detect.py.PNG)
+```python
+    if not match:
+        # Couldn't find the hardware, assume it isn't a pi.
+        return None
+    if match.group(1) == 'BCM2708':
+        # Pi 1
+        return 1
+    elif match.group(1) == 'BCM2709':
+        # Pi 2
+        return 2
+    elif match.group(1) == 'BCM2835':
+        # Pi 3
+        return 3
+    elif match.group(1) == 'BCM2837':
+        # Pi 3b+
+        return 3
+    #add 'BCM2700'
+    elif match.group(1) == 'BCM2711':
+        # Pi 4b
+        return 3
+    else:
+        # Something else, not a pi.
+        return None
 
     elif match.group(1) == 'BCM2711':
         # Pi 4b
         return 3
-
-- Recommend to Compile and install from this repository 
-
-```sh
-git clone https://github.com/everylumi/Adafruit_Python_DHT.git
-```
-
-Python 2:
-
-```sh
-cd Adafruit_Python_DHT
-sudo python setup.py install
-```
-
-Python 3:
-
-```sh
-cd Adafruit_Python_DHT
-sudo python3 setup.py install
 ```
 
 
-
-Installing
-----------
-
+## Installing using pip
 ### Dependencies
 
 For all platforms (Raspberry Pi and Beaglebone Black) make sure your system is
@@ -90,17 +99,12 @@ sudo pip3 install Adafruit_DHT
 ```
 
 
-
-Usage
------
-
+## Usage
 See example of usage in the examples folder.
 
 
 
-Author
-------
-
+## Author
 Adafruit invests time and resources providing this open source code, please
 support Adafruit and open-source hardware by purchasing products from Adafruit!
 
