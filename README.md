@@ -11,11 +11,18 @@ Currently the library is tested with Python 2.6, 2.7, 3.3 and 3.4.... 3.9 It sho
 
 ## Installation
 ```sh
-cd Downloads/  
+cd Downloads/  && sudo rm -rf Adafruit_Python_DHT
 git clone https://github.com/everylumi/Adafruit_Python_DHT.git
 cd Adafruit_Python_DHT/
 sudo python3 setup.py install #Python3  
 sudo python setup.py install #Python2
+```
+
+
+## Uninstallation
+```sh
+sudo pip3 uninstall Adafruit_Python_DHT  #Python3  
+sudo pip uninstall Adafruit_Python_DHT   #Python2
 ```
 
 
